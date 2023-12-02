@@ -4,7 +4,7 @@
 This project demonstrates the containerization of a microservice-based application, consisting of an Angular client app, Java API, Node.js API, and Nginx as a Api Gateway.
 
 ## Project overview
-/home/mody/emartapp-EcommerceApp/emartapp/EMart App Architecture.png
+![EMart App Architecture](https://github.com/MhmdAbdo74/Containerizing-Microservice-Project/assets/94086189/27421cc2-daf0-458b-bf77-9a4bcde39543)
 
 
 ## Project Structure
