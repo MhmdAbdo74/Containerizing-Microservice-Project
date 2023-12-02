@@ -29,7 +29,7 @@ The project structure is organized as follows:
 Before running this project, ensure you have the following dependencies installed on your machine:
 
 - Docker: [Install Docker](https://docs.docker.com/get-docker/)
-- Node.js: [Install Node.js](https://nodejs.org)
+- Node.js: [Install Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Getting Started
 
@@ -38,88 +38,16 @@ To get started with this project, follow the steps below:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/vaibhav-karad/emartapp.git
+   git clone https://github.com/MhmdAbdo74/Containerizing-Microservice-Project.git
    ```
 
-2. Build and run the Angular client app:
+2. Build and run the images:
 
    ```bash
-   cd angular-client-app
-   npm install
-   npm start
+   docker compose up -d
    ```
 
    The client app will be available at `http://localhost:4200`.
-
-3. Build and run the Java API:
-
-   ```bash
-   cd java-api
-   # Build the Java API
-   ./gradlew build
-
-   # Run the Java API
-   java -jar build/libs/java-api.jar
-   ```
-
-   The Java API will be available at `http://localhost:8080`.
-
-4. Build and run the Node.js API:
-
-   ```bash
-   cd node-api
-   npm install
-   npm start
-   ```
-
-   The Node.js API will be available at `http://localhost:3000`.
-
-5. Build and run Nginx as a reverse proxy:
-
-   ```bash
-   cd nginx
-   docker build -t my-nginx .
-   docker run -p 80:80 my-nginx
-   ```
-
-   Nginx will be available at `http://localhost`.
-
-## Containerization
-
-To containerize each component of the microservice project, Docker is used. Each component (Angular client app, Java API, Node.js API) has its own Dockerfile in its respective directory.
-
-To build and run the containers, follow these steps:
-
-1. Build the Docker images for each component:
-
-   ```bash
-   cd angular-client-app
-   docker build -t angular-client .
-
-   cd ../java-api
-   docker build -t java-api .
-
-   cd ../node-api
-   docker build -t node-api .
-   ```
-
-2. Run the containers:
-
-   ```bash
-   docker run -d -p 4200:80 angular-client
-   docker run -d -p 8080:8080 java-api
-   docker run -d -p 3000:3000 node-api
-   ```
-
-   The Angular client app will be available at `http://localhost:4200`, the Java API at `http://localhost:8080`, and the Node.js API at `http://localhost:3000`.
-
-3. (Optional) Build and run the Nginx container:
-
-   ```bash
-   cd nginx
-   docker build -t my-nginx .
-   docker run -d -p 80:80 my-nginx
-   ```
 
    Nginx will be available at `http://localhost`.
 
