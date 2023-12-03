@@ -29,7 +29,7 @@ The project structure is organized as follows:
 Before running this project, ensure you have the following dependencies installed on your machine:
 
 - Docker: [Install Docker](https://docs.docker.com/get-docker/)
-- Node.js: [Install Docker Compose](https://docs.docker.com/compose/install/)
+- Docker compose: [Install Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Getting Started
 
